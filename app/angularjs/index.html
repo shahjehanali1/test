@@ -1,0 +1,15 @@
+<html ng-app="">
+<head>
+	<title></title>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+	<input ng-model="name">{{name}}
+	<div class="container" ng-init="fnames=[{name:'Shahjehan'},{name:'Imran'},{name:'khubaib'},{name:'abdulwali'},{name:'adnan'},{name:'irfan'}]">
+		<ul>
+			<li ng-repeat="personName in fnames | filter:name | orderBy: 'name'">{{personName.name}}</li>
+		</ul>
+	</div>
+</body>
+</html>
